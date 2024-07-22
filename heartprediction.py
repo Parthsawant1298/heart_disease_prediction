@@ -16,22 +16,22 @@ st.title("Heart Disease Prediction")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    age = st.number_input('Age', min_value=0, max_value=120, value=52)
+    age = st.number_input('Age', min_value=0, max_value=120)
 
 with col2:
     sex = st.selectbox('Sex', [1, 0], format_func=lambda x: 'Male' if x == 1 else 'Female')
 
 with col3:
-    cp = st.number_input('Chest Pain Type (0-3)', min_value=0, max_value=3, value=0)
+    cp = st.number_input('Chest Pain Type (0-3)', min_value=0, max_value=3)
 
 # Create three columns for the second row of inputs
 col4, col5, col6 = st.columns(3)
 
 with col4:
-    trestbps = st.number_input('Resting Blood Pressure', min_value=0, max_value=300, value=125)
+    trestbps = st.number_input('Resting Blood Pressure', min_value=0, max_value=300)
 
 with col5:
-    chol = st.number_input('Serum Cholestoral (mg/dl)', min_value=0, max_value=600, value=212)
+    chol = st.number_input('Serum Cholestoral (mg/dl)', min_value=0, max_value=600)
 
 with col6:
     fbs = st.selectbox('Fasting Blood Sugar > 120 mg/dl', [1, 0], format_func=lambda x: 'True' if x == 1 else 'False')
@@ -40,10 +40,10 @@ with col6:
 col7, col8, col9 = st.columns(3)
 
 with col7:
-    restecg = st.number_input('Resting Electrocardiographic Results ', min_value=0, max_value=2, value=1)
+    restecg = st.number_input('Resting Electrocardiographic Results ', min_value=0, max_value=2)
 
 with col8:
-    thalach = st.number_input('Maximum Heart Rate Achieved', min_value=0, max_value=300, value=168)
+    thalach = st.number_input('Maximum Heart Rate Achieved', min_value=0, max_value=300)
 
 with col9:
     exang = st.selectbox('Exercise Induced Angina', [1, 0], format_func=lambda x: 'Yes' if x == 1 else 'No')
@@ -52,19 +52,19 @@ with col9:
 col10, col11, col12 = st.columns(3)
 
 with col10:
-    oldpeak = st.number_input('ST depression induced by exercise', min_value=0.0, max_value=10.0, value=1.0)
+    oldpeak = st.number_input('ST depression induced by exercise', min_value=0.0, max_value=10.0)
 
 with col11:
-    slope = st.number_input('Slope of the peak exercise ST segment ', min_value=0, max_value=2, value=2)
+    slope = st.number_input('Slope of the peak exercise ST segment ', min_value=0, max_value=2)
 
 with col12:
-    ca = st.number_input('major vessels colored by fluoroscopy ', min_value=0, max_value=4, value=2)
+    ca = st.number_input('major vessels colored by fluoroscopy ', min_value=0, max_value=4 )
 
 # Create a single column for the last input
 col13, col14 = st.columns(2)
 
 with col13:
-    thal = st.number_input('Thalassemia (1 = normal; 2 = fixed defect; 3 = reversable defect)', min_value=1, max_value=3, value=3)
+    thal = st.number_input('Thalassemia (1 = normal; 2 = fixed defect; 3 = reversable defect)', min_value=1, max_value=3)
 
 # Prediction
 if st.button('Predict'):
